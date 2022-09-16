@@ -3,8 +3,8 @@
 1 2 6 9 8 1 1 1 -> 8
 */
 
-const int MIN_ELEMENTS = 1;
-const int MAX_ELEMENTS = 50;
+const int MIN_ELEMENTS = -10;
+const int MAX_ELEMENTS = 10;
 const int ARRAY_SIZE   = 8;
 
 int[] GenerateArray(int length, int minRandom, int maxRandom)
@@ -29,9 +29,9 @@ void PrintArray(int[] array)
 
 int FindSecondMaxInArray(int[] arr)
 {
-    int max1 = 0;
+    int max1 = arr[0];
     int max2 = 0;
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
         if (arr[i] > max1)
         {
